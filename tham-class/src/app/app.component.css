@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    height: 100vh; /* Thiết lập chiều cao 100% của viewport */
+  }
+  
+  .sidebar {
+    width: 250px; /* Độ rộng của sidebar */
+    background-color: #f0f0f0; /* Màu nền của sidebar */
+    padding: 20px; /* Khoảng cách lề bên trong của sidebar */
+  }
+  
+  .content {
+    flex: 1; /* Tự mở rộng để lấp đầy không gian còn lại */
+    padding: 20px; /* Khoảng cách lề bên trong của nội dung */
+  }

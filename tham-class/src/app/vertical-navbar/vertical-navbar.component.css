@@ -1,0 +1,46 @@
+/* vertical-navbar.component.css */
+
+/* Thiết lập navbar dọc */
+nav {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các mục theo chiều dọc */
+  }
+  
+  /* Định dạng cho từng mục liên kết */
+  .mat-tab-link {
+    text-decoration: none;
+    padding: 12px 16px; /* Khoảng cách lề bên trong mỗi mục */
+    color: #333; /* Màu chữ mặc định */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng màu nền và màu chữ */
+  }
+  
+  /* Màu nền và màu chữ khi được chọn */
+  .mat-tab-link.mat-tab-label-active {
+    background-color: #D6F2BA;
+    color: #CE00FF; /* Màu chữ khi được chọn */
+  }
+  
+  /* Hiệu ứng hover */
+  .mat-tab-link:hover:not(.mat-tab-label-active) {
+    background-color: #f5f5f5; /* Màu nền khi hover */
+  }
+  
+  /* Định dạng cho mục liên kết trong .nav-overview */
+  .nav-bar-row {
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử con theo trục dọc */
+    padding: 12px 16px;
+  }
+  
+  .nav-bar-row img {
+    width: 24px; /* Đặt chiều rộng của biểu tượng hình ảnh */
+    margin-right: 8px; /* Khoảng cách với chữ */
+  }
+  
+  .nav-bar-row a {
+    font-size: 16px; /* Đặt kích thước chữ cho mục "Overview" */
+    display: flex; /* Sử dụng flexbox để căn giữa chữ */
+    align-items: center; /* Căn chỉnh các phần tử con theo trục dọc */
+  }
+  
