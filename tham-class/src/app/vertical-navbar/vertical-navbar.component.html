@@ -3,23 +3,22 @@
     <p>Thắm Class</p>
 </div>
 <nav mat-tab-nav-bar>
-    <div class="nav-bar-row">
-        <img src="../../assets/navbar/overview-icon.svg" alt="overview">
-        <a mat-tab-link routerLink="/overview">Overview</a>
+    <div class="nav-bar-row" (click)="setCurrentNav(menus.overview)">
+      <img src="../../assets/navbar/overview-icon.svg" alt="overview">
+      <a mat-tab-link routerLink="/overview">Overview</a>
     </div>
-    <div class="nav-bar-row">
-        <img src="../../assets/navbar/schedule-icon.svg" alt="schedule">
-        <a mat-tab-link routerLink="/schedule">Schedule</a>
+    <div class="nav-bar-row" (click)="setCurrentNav(menus.schedule)">
+      <img src="../../assets/navbar/schedule-icon.svg" alt="schedule">
+      <a mat-tab-link routerLink="/schedule">Schedule</a>
     </div>
-    <div class="nav-bar-row">
-        <img src="../../assets/navbar/student-icon.svg" alt="student">
-        <a mat-tab-link routerLink="/student">Student</a>
+    <div class="nav-bar-row" (click)="setCurrentNav(menus.student)">
+      <img src="../../assets/navbar/student-icon.svg" alt="student">
+      <a mat-tab-link routerLink="/student">Student</a>
     </div>
-    <div class="nav-bar-row">
-        <img src="../../assets/navbar/payment-icon.svg" alt="payment">
-        <a mat-tab-link routerLink="/payment">Payment</a>
+    <div class="nav-bar-row" (click)="setCurrentNav(menus.payment)">
+      <img src="../../assets/navbar/payment-icon.svg" alt="payment">
+      <a mat-tab-link routerLink="/payment">Payment</a>
     </div>
-    
-    
   </nav>
+  
   

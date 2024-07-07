@@ -9,6 +9,7 @@ import { StudentComponent } from './student/student.component';
 import { PaymentComponent } from './payment/payment.component';
 import { VerticalNavbarComponent } from './vertical-navbar/vertical-navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavigationService } from './services/navigation.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
