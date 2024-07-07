@@ -25,6 +25,7 @@
     flex: 1; /* Tự mở rộng để lấp đầy không gian còn lại */
     padding: 5px; /* Khoảng cách lề bên trong của nội dung */
     padding-left: 20px;
+    height: 100%;
   }
 
   .content-title{
@@ -47,5 +48,28 @@
     padding-left: 50px;
     display: flex;
     align-items: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 100px; /* Độ rộng của sidebar */
+      padding: 10px; /* Khoảng cách lề bên trong của sidebar */
+      height: 100%;
+    }
+
+    .content-title{
+      background: #D6F2BA;
+      width: 100%;
+      height: 50px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+    }
+
+    .content-title h1{
+      font-size: 22px;
+      font-weight: 600;
+      padding-left: 10px;
+    }
   }
   

@@ -77,4 +77,36 @@ nav {
     font-weight: 600;
     line-height: normal;
   }
+
+  @media screen and (max-width: 768px) {
+    .Tilte p{
+      width: 142px;
+      height: 31px;
+      font-size: 20px;
+      font-weight: 200;
+    }
+    
+    /* Thiết lập navbar dọc */
+    nav {
+        padding-top: 7px;
+        padding-left: 10px;
+      }
+      
+      /* Định dạng cho từng mục liên kết */
+      .mat-tab-link {
+        padding: 8px 10px; /* Khoảng cách lề bên trong mỗi mục */
+        
+      }
+      
+      .nav-bar-row img {
+        width: 16px; /* Đặt chiều rộng của biểu tượng hình ảnh */
+        height: 16px;
+        margin-right: 8px; /* Khoảng cách với chữ */
+      }
+      
+      .nav-bar-row a {
+        font-size: 12px; /* Đặt kích thước chữ cho mục "Overview" */
+        font-weight: 400;
+      }
+  }
   
