@@ -14,10 +14,20 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.navigationService.currentNav$.subscribe(nav => {
-      nav === menu.overview ? this.curMenu = 'Dashboard Overview' :
-      (nav === menu.schedule ? this.curMenu = 'Schedule' : (
-        nav === menu.student ? this.curMenu = 'Student' : 'Payment'
-      ))
+      switch(nav){
+        case menu.overview:
+          this.curMenu = 'Dashboard Overview';
+          break;
+        case menu.schedule:
+          this.curMenu = 'Schedule';
+          break;
+        case menu.student:
+          this.curMenu = 'Student';
+          break;
+        case menu.payment:
+          this.curMenu = 'Payment';
+          break;
+      }
     });
   }
 }
