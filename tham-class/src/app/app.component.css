@@ -12,26 +12,57 @@
   
   .sidebar {
     width: 230px; /* Độ rộng của sidebar */
-    padding: 20px; /* Khoảng cách lề bên trong của sidebar */
-    border-top-right-radius: 30px;
-    background: #D6F2BA;
-    box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.08);
+    padding: 0px; /* Khoảng cách lề bên trong của sidebar */
     display: flex;
     justify-content: center;
 
+  }
+
+  .sidebar-hidden{
+    display: none;
+  }
+
+  .sidebar-menu{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 30px;
+    background: #D6F2BA;
+    box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.08);
   }
   
   .content {
     flex: 1; /* Tự mở rộng để lấp đầy không gian còn lại */
     padding: 5px; /* Khoảng cách lề bên trong của nội dung */
-    padding-left: 20px;
+    padding-left: 10px;
     height: 100%;
+    width: auto;
   }
 
+  .content-header{
+    width: auto;
+    height: 91px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .content-header-icon{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-header img{
+    width: 35px;
+    height: 35px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
   .content-title{
     background: #D6F2BA;
     width: 100%;
-    height: 91px;
+    height: 100%px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
   }
@@ -50,17 +81,74 @@
     align-items: center;
   }
 
+  .hidden {
+    width: 70px; /* Độ rộng của sidebar */
+    padding: 5px; /* Khoảng cách lề bên trong của sidebar */
+    border-top-right-radius: 10px;
+    padding-top: 50px;
+
+    .sidebar-hidden{
+      height: 15%;
+      background: #D6F2BA;
+      display: none;
+    }
+  
+    .sidebar-menu{
+      height: 90%;
+    }
+  }   
+  
+  .hidden-header{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #D6F2BA;
+  }
+
   @media screen and (max-width: 768px) {
     .sidebar {
       width: 100px; /* Độ rộng của sidebar */
-      padding: 10px; /* Khoảng cách lề bên trong của sidebar */
       height: 100%;
     }
 
-    .content-title{
-      background: #D6F2BA;
+    .sidebar-hidden{
+      display: none;
+    }
+  
+    .sidebar-menu{
       width: 100%;
+      height: 100%;
+      padding: 5px; /* Khoảng cách lề bên trong của sidebar */
+      border-top-right-radius: 30px;
+    }
+
+    .content {
+      padding-left: 5px;
+    }
+    .content img{
+      height: 20px;
+      width: 20px;
+    }
+
+    .content-header{
       height: 50px;
+    }
+
+    .content-header-icon{
+      width: 5%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-header img{
+      width: 15px;
+      height: 15px;
+    }
+
+
+    .content-title{
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
 
@@ -70,6 +158,31 @@
       font-size: 22px;
       font-weight: 600;
       padding-left: 10px;
+    }
+
+    .hidden {
+      width: 30px; /* Độ rộng của sidebar */
+      padding: 5px; /* Khoảng cách lề bên trong của sidebar */
+      border-top-right-radius: 5px;
+      padding-top: 50px;
+
+      .sidebar-hidden{
+        height: 8%;
+        background: #D6F2BA;
+        display: none;
+      }
+    
+      .sidebar-menu{
+        height: 92%;
+        border-top-right-radius: 10px;
+      }
+    }   
+    
+    .hidden-header{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background: #D6F2BA;
     }
   }
   

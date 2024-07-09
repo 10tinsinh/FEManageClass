@@ -65,6 +65,7 @@ nav {
     width: 32px; /* Đặt chiều rộng của biểu tượng hình ảnh */
     height: 32px;
     margin-right: 8px; /* Khoảng cách với chữ */
+    padding-top: 7px;
   }
   
   .nav-bar-row a {

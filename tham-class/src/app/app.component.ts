@@ -10,6 +10,8 @@ import { menu } from './common/common.interface';
 export class AppComponent implements OnInit {
   title = 'tham-class';
   curMenu = 'Dashboard Overview';
+  isHidenMenu: boolean = false;
+
   constructor(private navigationService: NavigationService) {}
 
   ngOnInit() {
@@ -29,5 +31,13 @@ export class AppComponent implements OnInit {
           break;
       }
     });
+
+    this.navigationService.isHidenMenu$.subscribe(isHidden => {
+      this.isHidenMenu = isHidden;
+    });
+  }
+
+  toggleMenu() {
+    this.navigationService.toggleMenu();
   }
 }

@@ -1,11 +1,22 @@
 <div class="container">
-  <div class="sidebar">
-    <app-vertical-navbar></app-vertical-navbar>
+  <div class="sidebar" [ngClass]="{'hidden': isHidenMenu}">
+    <div class="sidebar-hidden"></div>
+    <div class="sidebar-menu">
+      <app-vertical-navbar></app-vertical-navbar>
+    </div>
   </div>
   <div class="content">
-    <div class="content-title">
-      <h1> {{curMenu}} </h1>
+    <div class="content-header" [ngClass]="{'hidden-header': isHidenMenu}">
+      <div class="content-header-icon">
+        <img *ngIf="!isHidenMenu" src="../assets/navbar/vector-icon-show.svg" alt="Vector Show" (click)="toggleMenu()">
+        <img *ngIf="isHidenMenu" src="../assets/navbar/vector-icon-hiden.svg" alt="Vector Hiden" (click)="toggleMenu()">
+      </div>
+      <div class="content-title">
+        <h1> {{curMenu}} </h1>
+      </div>
     </div>
-    <router-outlet></router-outlet>
+    <div class="content-body">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
