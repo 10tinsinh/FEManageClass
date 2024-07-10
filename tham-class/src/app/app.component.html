@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="sidebar" [ngClass]="{'hidden': isHidenMenu}">
+  <div class="sidebar" [ngClass]="{'hidden-sidebar': isHidenMenu}">
     <div class="sidebar-hidden"></div>
     <div class="sidebar-menu">
       <app-vertical-navbar></app-vertical-navbar>
@@ -15,7 +15,7 @@
         <h1> {{curMenu}} </h1>
       </div>
     </div>
-    <div class="content-body">
+    <div class="content-body" [ngClass]="{'hidden-body': isHidenMenu}">
       <router-outlet></router-outlet>
     </div>
   </div>
