@@ -12,6 +12,7 @@
   
   .sidebar {
     width: 230px; /* Độ rộng của sidebar */
+    height: 100%;
     padding: 0px; /* Khoảng cách lề bên trong của sidebar */
     display: flex;
     justify-content: center;
