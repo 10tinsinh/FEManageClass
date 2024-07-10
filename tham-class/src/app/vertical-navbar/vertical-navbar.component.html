@@ -4,19 +4,19 @@
 </div>
 <nav mat-tab-nav-bar>
     <div class="nav-bar-row" (click)="setCurrentNav(menus.overview)">
-      <img src="../../assets/navbar/overview-icon.svg" alt="overview">
+      <img src="../../assets/navbar/overview-icon.svg" alt="overview" [routerLink]="['/overview']">
       <a *ngIf="!isHidenMenu" mat-tab-link routerLink="/overview">Overview</a>
     </div>
     <div class="nav-bar-row" (click)="setCurrentNav(menus.schedule)">
-      <img src="../../assets/navbar/schedule-icon.svg" alt="schedule">
+      <img src="../../assets/navbar/schedule-icon.svg" alt="schedule" [routerLink]="['/schedule']">
       <a *ngIf="!isHidenMenu" mat-tab-link routerLink="/schedule">Schedule</a>
     </div>
     <div class="nav-bar-row" (click)="setCurrentNav(menus.student)">
-      <img src="../../assets/navbar/student-icon.svg" alt="student">
+      <img src="../../assets/navbar/student-icon.svg" alt="student" [routerLink]="['/student']">
       <a *ngIf="!isHidenMenu" mat-tab-link routerLink="/student">Student</a>
     </div>
     <div class="nav-bar-row" (click)="setCurrentNav(menus.payment)">
-      <img src="../../assets/navbar/payment-icon.svg" alt="payment">
+      <img src="../../assets/navbar/payment-icon.svg" alt="payment" [routerLink]="['/payment']">
       <a *ngIf="!isHidenMenu" mat-tab-link routerLink="/payment">Payment</a>
     </div>
   </nav>
