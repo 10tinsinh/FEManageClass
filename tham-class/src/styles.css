@@ -4,5 +4,5 @@
     padding: 0;
 }
 
-html, body { height: 100%; width: 100%; }
+html, body {overflow: hidden; height: 100%; width: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #DDF6D5;}
