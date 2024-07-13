@@ -1,177 +1,157 @@
-*{
-  margin: 0;
-  padding: 0;
+mat-sidenav-container {
+  height: 100vh;
+  background-color: #DDF6D5 !important;
+  position: relative; 
 }
 
-.container {
-    display: flex;
-    height: 100vh; /* Thiết lập chiều cao 100% của viewport */
-    overflow: hidden;
+.header-container {
+  display: flex;
+  align-items: center;
+  background-color: #D6F2BA; 
+  border-radius: 10px;
+}
+
+.toggle-button {
+  margin-right: 10px;
+}
+
+.sidebar-title {
+  background-color: #D6F2BA; /* Màu nền giống sidebar */
+  color: #333; /* Màu chữ */
+  font-size: 25px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm chữ */
+  text-align: center; /* Căn giữa chữ */
+  transition: opacity 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+  text-wrap: nowrap;
+}
+
+mat-sidenav {
+  width: 200px;
+  background-color: #D6F2BA !important;
+  padding-top: 10px;
+}
+
+mat-sidenav-content {
+  margin-left: 200px !important;
+  padding-left: 10px;
+}
+
+::ng-deep .mat-drawer-inner-container {
+  color: black !important;
+}
+
+.toggle-button {
+  background-color: #D6F2BA !important;
+  margin-right: 5px;
+  width: 30px; /* Chiều rộng của nút */
+  height: 30px; /* Chiều cao của nút */
+  font-size: 24px; /* Kích thước font của icon */
+  padding: 2px; /* Khoảng cách bên trong nút */
+}
+
+.toggle-button mat-icon {
+  background-color: #D6F2BA !important;
+  font-size: 24px; /* Kích thước icon */
+}
+
+.header-container-app{
+  width: 100%;
+}
+
+
+.hiden-side-bar{
+  mat-sidenav {
+    width: 70px;
+    padding-top: 10px;
+  }
+}
+
+
+.hiden-side-bar mat-sidenav-content {
+  margin-left: 70px !important;
+}
+
+
+/* Responsive CSS */
+@media (max-width: 1024px) {
+  .sidebar-title {
+    font-size: 20px;
+  }
+  mat-sidenav {
+    width: 150px;
+  }
+  mat-sidenav-content {
+    margin-left: 150px !important;
+  }
+
+  .toggle-button {
+    margin-right: 3px;
+    width: 25px; /* Chiều rộng của nút */
+    height: 25px; /* Chiều cao của nút */
+    font-size: 20px; /* Kích thước font của icon */
+    padding: 0.5px; /* Khoảng cách bên trong nút */
   }
   
-  .sidebar {
-    width: 230px; /* Độ rộng của sidebar */
-    height: 100%;
-    padding: 0px; /* Khoảng cách lề bên trong của sidebar */
-    display: flex;
-    justify-content: center;
-
+  .toggle-button mat-icon {
+    font-size: 20px; /* Kích thước icon */
   }
 
-  .sidebar-menu{
-    width: 100%;
-    height: 100%;
-    border-top-right-radius: 30px;
-    background: #D6F2BA;
-    box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.08);
+  .hiden-side-bar mat-sidenav {
+    width: 50px;
   }
-  
-  .content {
-    flex: 1; /* Tự mở rộng để lấp đầy không gian còn lại */
-    padding: 5px; /* Khoảng cách lề bên trong của nội dung */
-    padding-left: 10px;
-    display: flex;
-    flex-direction: column;
+  .hiden-side-bar mat-sidenav-content {
+    margin-left: 50px !important;
   }
+}
 
-  .content-header{
-    width: auto;
-    height: 91px;
-    display: flex;
-    justify-items: center;
-    align-items: center;
+@media (max-width: 768px) {
+  .sidebar-title {
+    font-size: 12px;
   }
-
-  .content-header-icon{
-    width: 5%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  mat-sidenav {
+    width: 100px;
   }
-  .content-header img{
-    width: 35px;
-    height: 35px;
-    padding-right: 15px;
-    padding-left: 10px;
+  mat-sidenav-content {
+    margin-left: 100px !important;
+    padding-left: 2px;
   }
-  .content-title{
-    background: #D6F2BA;
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
-
-  .content-title h1{
-    width: 100%;
-    height: 100%;
-    color: #221824;
-    font-family: Poppins;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding-left: 50px;
-    display: flex;
-    align-items: center;
-  }
-  .content-body {
-    flex: 1;
-    overflow-y: auto;
-  }
-  .hidden-sidebar {
-    width: 80px; /* Độ rộng của sidebar */
-    padding: 5px; /* Khoảng cách lề bên trong của sidebar */
-    border-top-right-radius: 5px;
-    padding-top: 91px;
-  
-  }   
-  
-  .hidden-header{
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background: #D6F2BA;
-    padding-left: 10px;
-  }
-
-  .hidden-body{
-    padding-top: 100px;
-  }   
-
-  @media screen and (max-width: 768px) {
-    .sidebar {
-      width: 100px; /* Độ rộng của sidebar */
-      height: 100%;
-    }
-  
-    .sidebar-menu{
-      width: 100%;
-      height: 100%;
-      padding: 5px; /* Khoảng cách lề bên trong của sidebar */
-      border-top-right-radius: 30px;
-    }
-
-    .content {
-      padding-left: 5px;
-    }
-    .content img{
-      height: 20px;
-      width: 20px;
-    }
-
-    .content-header{
-      height: 50px;
-    }
-
-    .content-header-icon{
-      width: 5%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .content-header img{
-      width: 15px;
-      height: 15px;
-    }
-
-
-    .content-title{
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-
-    }
-
-    .content-title h1{
-      font-size: 22px;
-      font-weight: 600;
-      padding-left: 10px;
-    }
-
-    .hidden-sidebar {
-      width: 30px; /* Độ rộng của sidebar */
-      padding: 5px; /* Khoảng cách lề bên trong của sidebar */
-      border-top-right-radius: 5px;
-      padding-top: 50px;
-    
-      .sidebar-menu{
-        border-top-right-radius: 10px;
-      }
-    }   
-    
-    .hidden-header{
-      position: absolute;
-      left: 0;
-      width: 100%;
-      background: #D6F2BA;
-      padding-left: 10px;
-      
-    }
-    .hidden-body{
-      padding-top: 60px;
-    }
+  .toggle-button {
+    margin-right: 3px;
+    width: 25px; /* Chiều rộng của nút */
+    height: 25px; /* Chiều cao của nút */
+    font-size: 20px; /* Kích thước font của icon */
+    padding: 0.5px; /* Khoảng cách bên trong nút */
   }
   
+  .toggle-button mat-icon {
+    font-size: 20px; /* Kích thước icon */
+  }
+  .hiden-side-bar mat-sidenav {
+    width: 30px;
+  }
+  .hiden-side-bar mat-sidenav-content {
+    margin-left: 30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-title {
+    font-size: 10px !important;
+    margin-left: -15px;
+  }
+  mat-sidenav {
+    width: 70px;
+  }
+  mat-sidenav-content {
+    margin-left: 70px !important;
+  }
+  .sidebar-title {
+    font-size: 20px;
+  }
+  .hiden-side-bar mat-sidenav {
+    width: 30px;
+  }
+  .hiden-side-bar mat-sidenav-content {
+    margin-left: 30px !important;
+  }
+}

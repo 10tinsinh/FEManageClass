@@ -1,0 +1,11 @@
+.header {
+    background-color: #D6F2BA; /* Màu nền giống sidebar */
+    padding: 16px; /* Khoảng cách giữa nội dung và viền */
+    border-radius: 8px 0 0 8px; /* Bo góc trên và dưới bên trái */
+  }
+  
+  .header h2 {
+    font-size: 24px; /* Kích thước chữ lớn hơn */
+    margin: 0; /* Loại bỏ khoảng cách mặc định của thẻ h2 */
+    font-weight: bold; /* Đậm chữ */
+  }

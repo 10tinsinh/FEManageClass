@@ -1,22 +1,15 @@
-<div class="container">
-  <div class="sidebar" [ngClass]="{'hidden-sidebar': isHidenMenu}">
-    <div class="sidebar-hidden"></div>
-    <div class="sidebar-menu">
-      <app-vertical-navbar></app-vertical-navbar>
+<mat-sidenav-container [ngClass]="{'hiden-side-bar': !isExpanded}">
+  <mat-sidenav mode="side" opened>
+    <div class="sidebar-title" *ngIf="isExpanded">Thắm Class</div>
+    <app-sidebar [isExpanded]="isExpanded"></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="header-container">
+      <button mat-icon-button (click)="toggleSidebar()" class="toggle-button">
+        <mat-icon>{{ isExpanded ? 'menu_open' : 'menu' }}</mat-icon>
+      </button>
+      <app-header class="header-container-app"></app-header>
     </div>
-  </div>
-  <div class="content">
-    <div class="content-header" [ngClass]="{'hidden-header': isHidenMenu}">
-      <div class="content-header-icon">
-        <img *ngIf="!isHidenMenu" src="../assets/navbar/vector-icon-show.svg" alt="Vector Show" (click)="toggleMenu()">
-        <img *ngIf="isHidenMenu" src="../assets/navbar/vector-icon-hiden.svg" alt="Vector Hiden" (click)="toggleMenu()">
-      </div>
-      <div class="content-title">
-        <h1> {{curMenu}} </h1>
-      </div>
-    </div>
-    <div class="content-body" [ngClass]="{'hidden-body': isHidenMenu}">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

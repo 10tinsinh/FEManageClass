@@ -1,0 +1,18 @@
+<mat-nav-list class="custom-sidebar flex-container" style="color: black !important;">
+    <a mat-list-item routerLink="/dashboard" routerLinkActive="active" style="color: black !important;" class="flex-item">
+      <mat-icon style="color: black !important;">dashboard</mat-icon>
+      <span class="text-sidebar" *ngIf="isExpanded" style="color: black !important;">Dashboard</span>
+    </a>
+    <a mat-list-item routerLink="/schedule" routerLinkActive="active" style="color: black !important;" class="flex-item">
+        <mat-icon style="color: black !important;">schedule</mat-icon>
+        <span class="text-sidebar" *ngIf="isExpanded" style="color: black !important;">Schedule</span>
+    </a>
+    <a mat-list-item routerLink="/student" routerLinkActive="active" style="color: black !important;" class="flex-item">
+        <mat-icon style="color: black !important;">people</mat-icon>
+        <span class="text-sidebar" *ngIf="isExpanded" style="color: black !important;">Student</span>
+    </a>
+    <a mat-list-item routerLink="/payment" routerLinkActive="active" style="color: black !important;" class="flex-item">
+        <mat-icon style="color: black !important;">payment</mat-icon>
+        <span class="text-sidebar" *ngIf="isExpanded" style="color: black !important;">Payment</span>
+    </a>
+  </mat-nav-list>

@@ -1,0 +1,119 @@
+:host {
+    display: block;
+    color: black !important;
+  }
+  
+  .custom-sidebar {
+    color: black !important;
+  }
+  
+  .custom-sidebar .mat-list-item {
+    color: black !important;
+  }
+  
+  .custom-sidebar .mat-icon {
+    color: black !important;
+    margin-bottom: -3px;
+  }
+  
+  .custom-sidebar .mat-list-item-content {
+    color: black !important;
+  }
+  
+  .active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  ::ng-deep .mat-list-item-content {
+    color: black !important;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-item {
+    display: flex;
+    align-items: center;
+    padding-left: 2px; /* Thêm padding-left cho các phần tử có class flex-item */
+  }
+  
+  .flex-item mat-icon {
+    margin-right: 1px; /* Khoảng cách giữa icon và chữ */
+  }
+
+  .text-sidebar{
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+/* Responsive CSS */
+@media (max-width: 1024px) {
+  mat-sidenav {
+    width: 150px;
+  }
+  mat-sidenav-content {
+    margin-left: 150px !important;
+  }
+  .custom-sidebar .mat-icon {
+    font-size: 23px; /* Kích thước icon cho màn hình <= 1024px */
+    margin-bottom: -5px;
+  }
+
+  .text-sidebar{
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  mat-sidenav {
+    width: 100px;
+  }
+  mat-sidenav-content {
+    margin-left: 100px !important;
+  }
+  .custom-sidebar .mat-icon {
+    font-size: 10px; /* Kích thước icon cho màn hình <= 768px */
+    margin-bottom: -15px;
+    margin-right: -6px;
+  }
+  .text-sidebar{
+    font-size: 8px;
+    font-weight: 600;
+  }
+
+}
+
+@media (max-width: 480px) {
+  mat-sidenav {
+    width: 70px;
+  }
+  mat-mdc-list-item mdc-list-item flex-item mat-mdc-list-item-interactive mat-mdc-list-item-single-line mdc-list-item--with-one-line{
+    padding-left: 6px !important;
+  }
+  mat-sidenav-content {
+    margin-left: 70px !important;
+  }
+  .custom-sidebar .mat-icon {
+    font-size: 7px; /* Kích thước icon cho màn hình <= 768px */
+    margin-bottom: -15px;
+    margin-right: -6px;
+  }
+  .text-sidebar{
+    font-size: 5px;
+    font-weight: 600;
+  }
+
+  .flex-item {
+    padding-left: 5px !important; /* Thêm padding-left cho các phần tử có class flex-item */
+  }
+  
+  .flex-item mat-icon {
+    margin-right: 0px; /* Khoảng cách giữa icon và chữ */
+  }
+}

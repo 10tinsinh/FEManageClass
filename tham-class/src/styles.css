@@ -1,8 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
-*{
+body, html {
     margin: 0;
     padding: 0;
-}
-
-html, body {overflow: hidden; height: 100%; width: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #DDF6D5;}
+    font-family: Arial, sans-serif;
+    background-color: #DDF6D5;
+    color: black !important;
+  }
+  
+  * {
+    color: black !important;
+  }
+  
+  .mat-typography {
+    color: black !important;
+  }
+  
+  .mat-drawer-container, .mat-drawer {
+    color: black !important;
+    background-color: #DDF6D5;
+  }
+  
+  .mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+    color: black !important;
+  }
+  
+  .mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
+    color: black !important;
+  }
